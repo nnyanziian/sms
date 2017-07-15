@@ -112,5 +112,8 @@
 		return uploadSerialDoc($id);
 	});
 
+	//add Admin *
+	$app->post('/user/login', 'userLogin');
+
 
 	$app->run();
