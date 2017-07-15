@@ -1,0 +1,141 @@
+/* fallback */
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(font/googleFont.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box !important;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 50px;
+    width: 50%;
+    margin: 0 25%;
+    z-index: 20000;
+}
+
+.custom-head {
+    background-color: #008181 !important;
+}
+
+a.navbar-brand {
+    color: #fff !important;
+}
+
+.custom-head a {
+    color: #fff !important;
+}
+
+.log {
+    width: 30%;
+    margin: 0 35%;
+}
+
+.logo {
+    margin-top: 5vh;
+}
+
+.loginForm {
+    margin-top: 50px;
+}
+
+.btn-primary {
+    color: #333;
+    background-color: #7dccbf !important;
+    border-color: #7dccbf !important;
+}
+
+.loader {
+    background: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 998;
+    display: none;
+}
+
+.hero-text {
+    padding: 100px;
+}
+
+.loginForm {
+    background-color: #fff;
+}
+
+.lightJumbo {
+    background-color: #7dccbf;
+}
+
+.listOfStudnets {
+    background-color: #f7f7f7;
+}
+
+.vAlign {
+    vertical-align: middle;
+    line-height: 100%;
+}
+
+.progress-circle {
+    width: 100px;
+    border: 2px solid #008181;
+    height: 100px;
+    text-align: center;
+    padding: auto 0;
+    border-radius: 50%;
+    line-height: 100px;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.scrollable {
+    height: 30vh;
+    overflow: scroll;
+    background-color: #fff;
+    padding: 5px;
+    overflow: auto;
+}
+
+.activityItem,
+.commentItem {
+    border-bottom: 1px solid #787878;
+    padding: 20px 10px;
+    margin: 5px 0;
+}
+
+.activityItem button,
+.commentItem button {
+    margin: 0 10px;
+}
+
+.disabled {
+    opacity: 0.1;
+}
+
+.hiddenE{
+    display:none;
+}
