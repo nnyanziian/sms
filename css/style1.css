@@ -74,7 +74,9 @@
                                                 border-radius: 5px;
                                                 margin-top: 5%;
                                             }
-                                            
+                                            .mainLogin{
+                                                position: relative;
+                                            }
                                             .loginView .sms-logo {
                                                 margin: 30px auto;
                                                 height:60px;

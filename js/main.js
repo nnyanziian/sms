@@ -34,13 +34,26 @@ $(function() {
 
     $('.registerMain').click( function(e){
         e.preventDefault();
-        $('.mainLogin').addClass('hiddenElement');
-        $('.mainRegister').removeClass('hiddenElement');
-
+         $('.mainLogin').animate({ top:"-=500px"}, function(){
+            $('.mainRegister').fadeIn();
+            $('.mainLogin').hide();
+         });
+        
+      
         $('.loginMain').click( function(e){
-            $('.mainRegister').addClass('hiddenElement');
-        $('.mainLogin').removeClass('hiddenElement');
+            $('.mainLogin').fadeIn();
+            $('.mainRegister').fadeOut();
+            $('.mainLogin').animate({ top:"0px"}, function(){
+                
+                
+            });
+            
+             
+            
+           
+         
         });
+
     });
 
    

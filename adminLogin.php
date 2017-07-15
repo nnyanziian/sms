@@ -48,10 +48,7 @@ else{
 			<br>
 			<Button type="submit" class="continue btn btn-primary">Login <span class="fa fa-angle-right"></span></Button>
 			</form>
-			<p class="text-center page-header">I do not have a user acount !</p>
-			<a href="register.php"class="continue btn btn-default">Register <span class="fa fa-edit"></span></a>
-			<br>
-			<br>
+			
 			<br>
 		</div>
 	</div>
