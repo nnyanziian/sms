@@ -112,8 +112,12 @@
 		return uploadSerialDoc($id);
 	});
 
-	//add Admin *
+	//add user *
 	$app->post('/user/login', 'userLogin');
+	$app->post('/admin/login', 'adminLogin');
 
+
+	//api/users/all 
+	$app->get('/logout', 'logout');
 
 	$app->run();

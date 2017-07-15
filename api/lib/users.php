@@ -294,6 +294,21 @@
 	
 	}
 
+//logout
 
+function logout($conn){
+
+	$_SESSION=array();
+	session_destroy();
+	
+	echo json_encode(array(
+												'status' => 'success',
+												'message' => 'Logged out successfully'
+								));
+				exit();
+
+
+
+}
 
 ?>

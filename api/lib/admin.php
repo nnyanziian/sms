@@ -1,4 +1,5 @@
 <?php
+session_start();
 header('Content-type:application/json');
 
 //get all students
@@ -171,13 +172,13 @@ header('Content-type:application/json');
 		}
 		
 	}
-	function userLogin() {
+	function adminLogin() {
 		$conn = connect_db();
 
-		$user_name = isescape('user_name');
-		$user_password = isescape('user_password');
+		$admin_username = isescape('admin_username');
+		$admin_password = isescape('admin_password');
 			
-			$loginSql = "SELECT * FROM user WHERE user_name ='$user_name' LIMIT 1";
+			$loginSql = "SELECT * FROM library_admin WHERE admin_username ='$admin_username' LIMIT 1";
 			$result   = $conn->query($loginSql);
 			
 			if (!$result) {
@@ -190,16 +191,16 @@ header('Content-type:application/json');
 				
 				$user = $result->fetch_array(MYSQLI_ASSOC);
 				
-				if (password_verify($user_password, $user['user_password'])) {
+				if (password_verify($admin_password, $user['admin_password'])) {
 					
-					$_SESSION['sms-user_id']  = $user['user_id'];
-					$_SESSION['sms-user_name'] = $user['user_name'];
+					$_SESSION['sms-admin_id']  = $user['admin_id'];
+					$_SESSION['sms-admin_username'] = $user['admin_username'];
 					
 					
 					echo json_encode(array(
 						'status' => 'success',
-						'user_id' => $_SESSION['sms-user_id'],
-						'user_name' => $_SESSION['sms-user_name']
+						'user_id' => $_SESSION['sms-admin_id'],
+						'user_name' => $_SESSION['sms-admin_username']
 					));
 					exit();
 					
@@ -207,7 +208,7 @@ header('Content-type:application/json');
 					
 					echo json_encode(array(
 						'status' => 'failed',
-						'message' => 'Password combination does not match the Username: ' . $user['user_name']
+						'message' => 'Password combination does not match the Username: ' . $user['admin_username']
 					));
 					exit();
 				}
