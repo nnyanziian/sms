@@ -63,6 +63,15 @@ $(function() {
         logout();
     });
 
+    $('.fab-to-admin').click( function(){
+        $('.fab-to-admin .ripple').addClass('rippleFx');
+        setTimeout( function(){
+             $('.fab-to-admin .ripple').removeClass('rippleFx');
+        },200);
+          
+         
+    });
+
 
 
 });
