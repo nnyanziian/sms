@@ -1,0 +1,15 @@
+Options -Multiviews
+
+RewriteEngine On
+RewriteBase /sms
+
+
+# Specify search friendly URLs
+RewriteRule ^register$ ./register.php [L]
+RewriteRule ^welcome$ ./index.php [L]
+RewriteRule ^admin-login$ ./adminLogin.php [L]
+RewriteRule ^user$ ./user.php [L]
+
+
+
+ 

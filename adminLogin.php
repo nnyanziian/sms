@@ -27,14 +27,14 @@ else{
 <?php
 	include("inc/header.php");
 ?>
-<div class="homeBg">
+<div class="adminBg">
 
 </div>
 <div class="container topScreen">
 	<div class="row">
 		<div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3 loginView">
 			<a href="./welcome"><img src="img/logo.png" class="sms-logo img-responsive"></a>
-			<h3 class="text-center">User Register</h3>
+			<h3 class="text-center">Admin Login</h3>
 			<form class="mainLogin">
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user"></i></span>
@@ -55,8 +55,9 @@ else{
 			<br>
 		</div>
 	</div>
-	<div class="fab-to-admin"><a href="./admin-login"><span class="fa fa-user"> </span> Staff</a></div>
+		<div class="fab-to-admin"><a href="./welcome"><span class="fa fa-home"> </span> Home</a></div>
 </div>
+
 
 
 <?php

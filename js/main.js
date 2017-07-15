@@ -32,24 +32,18 @@ $(function() {
 
     });
 
-    //main login
-    $('.mainLogin').submit(function(event) {
-        event.preventDefault();
-        console.log("Login Form is being submited");
-        var type = $('.mainLogin .type').val();
-        if (type == '1') {
-            studentLogin();
-        } else if (type == '2') {
-            suLogin();
-        } else if (type == '3') {
-            cordinatorLogin();
-        } else {
-            notify("Could not get User Type", "error");
-        }
+    $('.registerMain').click( function(e){
+        e.preventDefault();
+        $('.mainLogin').addClass('hiddenElement');
+        $('.mainRegister').removeClass('hiddenElement');
 
-
-
+        $('.loginMain').click( function(e){
+            $('.mainRegister').addClass('hiddenElement');
+        $('.mainLogin').removeClass('hiddenElement');
+        });
     });
+
+   
 
     $('.logout').click(function(event) {
         event.preventDefault();
@@ -139,40 +133,7 @@ function notify(textM, type) {
 
 
 
-function studentLogin() {
-    var username = $('.username').val();
-    var password = $('.password').val();
 
-
-    var formdata = {
-        "student_no": username,
-        "password": password,
-    };
-    var LoginSettings = {
-        "type": "POST",
-        //"dataType": "json",
-        "data": formdata,
-        "url": "api/student/login"
-    };
-
-    $.ajax(LoginSettings).success(function(response) {
-        if (response.status == 'failed' || response.status == 'error') {
-            console.log(JSON.stringify(response));
-            notify(response.message, "warning");
-        } else if (response.status == 'success') {
-            $('.mainLogin')[0].reset();
-            console.log(JSON.stringify(response));
-            notify("Logging in as Student " + response.student_no, "success");
-            location.reload();
-            //window.location.href = "student.php";
-        } else {
-
-        }
-
-    });
-
-
-}
 
 function cordinatorLogin() {
     var username = $('.username').val();

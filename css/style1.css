@@ -1,141 +1,127 @@
-/* fallback */
-
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Material Icons'), local('MaterialIcons-Regular'), url(font/googleFont.woff2) format('woff2');
-}
-
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-}
-
-* {
-    box-sizing: border-box !important;
-}
-
-body {
-    background-color: #f7f7f7;
-}
-
-.notification {
-    display: none;
-    position: fixed;
-    top: 50px;
-    width: 50%;
-    margin: 0 25%;
-    z-index: 20000;
-}
-
-.custom-head {
-    background-color: #008181 !important;
-}
-
-a.navbar-brand {
-    color: #fff !important;
-}
-
-.custom-head a {
-    color: #fff !important;
-}
-
-.log {
-    width: 30%;
-    margin: 0 35%;
-}
-
-.logo {
-    margin-top: 5vh;
-}
-
-.loginForm {
-    margin-top: 50px;
-}
-
-.btn-primary {
-    color: #333;
-    background-color: #7dccbf !important;
-    border-color: #7dccbf !important;
-}
-
-.loader {
-    background: rgba(255, 255, 255, 0.5);
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: 998;
-    display: none;
-}
-
-.hero-text {
-    padding: 100px;
-}
-
-.loginForm {
-    background-color: #fff;
-}
-
-.lightJumbo {
-    background-color: #7dccbf;
-}
-
-.listOfStudnets {
-    background-color: #f7f7f7;
-}
-
-.vAlign {
-    vertical-align: middle;
-    line-height: 100%;
-}
-
-.progress-circle {
-    width: 100px;
-    border: 2px solid #008181;
-    height: 100px;
-    text-align: center;
-    padding: auto 0;
-    border-radius: 50%;
-    line-height: 100px;
-    vertical-align: middle;
-    margin: 0 auto;
-}
-
-.scrollable {
-    height: 30vh;
-    overflow: scroll;
-    background-color: #fff;
-    padding: 5px;
-    overflow: auto;
-}
-
-.activityItem,
-.commentItem {
-    border-bottom: 1px solid #787878;
-    padding: 20px 10px;
-    margin: 5px 0;
-}
-
-.activityItem button,
-.commentItem button {
-    margin: 0 10px;
-}
-
-.disabled {
-    opacity: 0.1;
-}
-
-.hiddenE{
-    display:none;
-}
+                                                /* fallback */
+                                            
+                                            @font-face {
+                                                font-family: Regular;
+                                                src: url('../custom-fonts/Roboto-Regular.ttf');
+                                            }
+                                            
+                                            @font-face {
+                                                font-family: light;
+                                                src: url('../custom-fonts/Roboto-Light.ttf');
+                                            }
+                                            
+                                            @font-face {
+                                                font-family: bold;
+                                                src: url('../custom-fonts/Roboto-Bold.ttf');
+                                            }
+                                            
+                                            * {
+                                                box-sizing: border-box !important;
+                                                margin: 0;
+                                                padding: 0;
+                                                font-family: "Regular";
+                                                letter-spacing: 0.5px;
+                                            }
+                                            
+                                            body {
+                                                background-color: #fff;
+                                                height: 100vh;
+                                            }
+                                            
+                                            .notification {
+                                                display: none;
+                                                position: fixed;
+                                                top: 50px;
+                                                width: 50%;
+                                                margin: 0 25%;
+                                                z-index: 20000;
+                                            }
+                                            
+                                            .homeBg {
+                                                background-image: url('../img/mainBg.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                background-repeat: no-repeat;
+                                                height: 100%;
+                                                width: 100%;
+                                                filter: blur(5px);
+                                                z-index: 20;
+                                                position: fixed;
+                                                top: 0;
+                                            }
+                                            
+                                            .adminBg {
+                                                background-image: url('../img/adminBg.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                background-repeat: no-repeat;
+                                                height: 100%;
+                                                width: 100%;
+                                                filter: blur(5px);
+                                                z-index: 20;
+                                                position: fixed;
+                                                top: 0;
+                                            }
+                                            
+                                            .topScreen {
+                                                z-index: 999;
+                                                position: relative;
+                                            }
+                                            
+                                            .loginView {
+                                                background-color: rgba(255, 255, 255, 0.8);
+                                                overflow: auto;
+                                                border-radius: 5px;
+                                                margin-top: 5%;
+                                            }
+                                            
+                                            .loginView .sms-logo {
+                                                margin: 30px auto;
+                                                height:60px;
+                                            }
+                                            
+                                            .loginView h3 {
+                                                color: #f44336;
+                                            }
+                                            
+                                            .loginView .continue {
+                                                width: 50%;
+                                                margin: 0 25%;
+                                            }
+                                            
+                                            .fab-to-admin {
+                                                border-radius: 50%;
+                                                background-color:#f44336;
+                                                text-align: center;
+                                                padding: 5px;
+                                                width:80px;
+                                                height: 80px;
+                                                color:#fff;
+                                                padding-top: 30px;
+                                                font-weight: bold;
+                                                position: fixed;
+                                                bottom: 30px;
+                                                right:30px;
+                                                -webkit-transition: width 100ms; /* Safari */
+                                                 transition: width 100ms;
+                                                 -webkit-transition: height 100ms; /* Safari */
+                                                 transition: height 100ms;
+                                                 -webkit-transition: padding-top 70ms; /* Safari */
+                                                 transition: padding-top 70ms;
+                                            }
+                                                .fab-to-admin *{
+                                                    color:#fff !important;
+                                                    
+                                                }
+                                                .fab-to-admin *:hover{
+                                                    text-decoration: none;
+                                                }
+                                            .fab-to-admin:hover{
+                                               width:100px;
+                                                height: 100px;
+                                                padding-top: 40px;
+                                                cursor: pointer;
+                                             }
+                                            .hiddenElement{
+                                                display: none;
+                                            }

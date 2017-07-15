@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (! isset($_SESSION)){
+	session_start();
+}
 header('Content-type:application/json');
 
 //get all students
