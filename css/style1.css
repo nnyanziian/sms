@@ -148,3 +148,77 @@
     .rippleFx{
         animation: ripple-animation 500ms;
     }
+
+    .profileBar{
+        background-color: #3f51b5;
+        height: 100vh;
+        padding: 10px;
+    }
+    .profileBar .topProfile{
+        background-color: rgba(0, 0, 0, 0.3);
+        height:auto;
+        overflow: auto;
+        position: relative;
+    }
+    .profileBar .topProfile .profile_image{
+        height:150px;
+        width:150px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin: 15px auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .customContainer{
+        width:100%;
+    }
+    .profileBar .topProfile .editProfileBtn{
+        margin: 5px auto;
+        display: block;
+    }
+
+    .profileBar .topProfile .editProfileImgBtn{
+        position: absolute;
+        right: 25px;
+        top:25px;
+    }
+    .profileBar .topProfile h4{
+        color: #fff;
+    }
+    .profileBar .topProfile p{
+        color:rgba(255, 255, 255, 0.5);
+     }
+    .logoutBtn{
+        position: absolute;
+        bottom: 10px;
+        left:38%;
+    }
+
+    .search-filfter{
+        background-color: #3f51b5;
+        overflow: auto;
+        padding:10px;
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .search-filfter input, .search-filfter .btn{
+        border:1px solid #3f51b5;
+        border-radius: 0px;
+        margin: 0 5%;
+    }
+    .serialContent{
+        height: 80vh;
+        width: 100%;
+        padding: 20px;
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+    }
+    .serial{
+        height:200px;
+        width:40%;
+        border:1px solid #ccc;
+        overflow: hidden;
+        background-color: #f7f7f7;
+    }
