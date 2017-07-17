@@ -52,7 +52,8 @@ else{
 			<br>
 		</div>
 	</div>
-		<div class="fab-to-admin"><a href="./welcome"><span class="fa fa-home"> </span> Home</a></div>
+		
+		<a href="./welcome" class="fab-to-admin"><span class="fa fa-home"> </span> Home<span class="ripple"></span></a>
 </div>
 
 

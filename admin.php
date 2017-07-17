@@ -40,6 +40,9 @@ else{
                 <button class="editProfileBtn btn btn-sm btn-default"><span class="fa fa-pencil"> </span> Edit Profile</button>
                 <br>
             </div>
+            <div class="activity">
+                <a href="#" data-toggle="modal" data-target=""><span class="fa fa-plus"></span> Add Serial</a>
+            </div>
 
             <button class="logoutBtn btn btn-md btn-danger">Logout</button>
         </div>

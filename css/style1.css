@@ -105,14 +105,17 @@
                                                 bottom: 30px;
                                                 right:30px;
                                                 overflow: hidden;
+                                                color: #fff;
                                                
                                             }
                                                 .fab-to-admin *{
                                                     color:#fff !important;
-                                                    
+                                                    line-height: 70px;
+                                                    vertical-align: middle;
                                                 }
-                                                .fab-to-admin *:hover{
+                                                .fab-to-admin:hover{
                                                     text-decoration: none;
+                                                    color: #fff;
                                                 }
                                             
                                             .hiddenElement{
@@ -288,4 +291,17 @@
         position:absolute;
         bottom:20px;
         left:20%;
+    }
+    .activity{
+
+    }
+    .activity a{
+        width: 100%;
+        color:#fff;
+        margin: 30px auto;
+        display:block;
+        clear:both;
+        font-size:18px;
+        text-align: center;
+        text-decoration: none;
     }

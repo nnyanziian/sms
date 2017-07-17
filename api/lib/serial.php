@@ -239,6 +239,39 @@ header('Content-type:application/json');
 		}
 		
 	}
+	
+	
+	function searchSerial($text=''){
+		$conn=connect_db();
+		$sql = "SELECT * FROM serial_pubs WHERE serial_title LIKE '%$text%' OR serial_details LIKE '%$text%'";
+		$result = mysqli_query($conn, $sql);
+		if (!$result) {
+			
+			echo json_encode(array(
+				'status' => 'error',
+				'message' => mysqli_error($conn)
+			));
+			exit();
+		}
+		else{
+			
+			if ($result->num_rows > 0) {
+				
+				echo json_encode(array(
+					'status' => 'success',
+					'data' => $result->fetch_all(MYSQLI_ASSOC)
+				));
+				exit();
+			} else if ($result->num_rows <= 0) {
+				
+				echo json_encode(array(
+					'status' => 'failed',
+					'message' => 'Serial not Found'
+					));
+				exit();
+			}
+		}
+	}
 
 
 ?>

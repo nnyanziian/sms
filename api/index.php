@@ -30,6 +30,12 @@
 		$id=(int)$args['id'];
 		return getSerialById($id);
 	});
+
+	//api/serial/id 	
+	$app->get('/serial/search/{text}', function ($request, $response, $args){
+		$text=(string)$args['text'];
+		return searchSerial($text);
+	});
 	
 			//api/admins/all 
 	$app->get('/admins/all', 'getAllAdmins');

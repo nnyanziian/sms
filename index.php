@@ -97,7 +97,7 @@ else{
 			<br>
 		</div>
 	</div>
-	<button class="fab-to-admin"><span class="fa fa-user"> </span> Staff<span class="ripple"></span></button>
+	<a href="./admin-login" class="fab-to-admin"><span class="fa fa-user"> </span> Staff<span class="ripple"></span></a>
 </div>
 
 
