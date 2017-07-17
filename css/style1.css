@@ -198,9 +198,14 @@
         background-color: #3f51b5;
         overflow: auto;
         padding:10px;
-        width: 50%;
+        width: auto;
         display: block;
         margin: 0 auto;
+    }
+    .search-filfter h3{
+        color:#fff;
+        float: left;
+        margin: 0;
     }
 
     .search-filfter input, .search-filfter .btn{
@@ -212,13 +217,52 @@
         height: 80vh;
         width: 100%;
         padding: 20px;
+        overflow-y: scroll;
         border-top:1px solid #ccc;
         border-bottom:1px solid #ccc;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-around;
+       
     }
-    .serial{
+    .serial{    
         height:200px;
         width:40%;
         border:1px solid #ccc;
         overflow: hidden;
         background-color: #f7f7f7;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        cursor: pointer;
+        margin-top:10px;
+        margin-bottom: 10px;
+        position: relative;
+}
+    .serial .getDetailsBtn{
+        position: absolute;
+        top:10px;
+        right:10px;
+        display: none;
+    }
+    .serial:hover .getDetailsBtn{
+        display: block;
+    }
+
+.serial:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+    .serial .serial_image{
+        height:60%;
+        background-color: #3f51b5;
+        background-position: center;
+        background-size: cover;
+    }
+    .serial .serial_title{
+        color:#3f51b5;
+        font-weight: bold;
+        margin:10px 5px;
+    }
+    .serial .serial_details{
+      margin:10px 5px;
+      color:#787878;  
     }

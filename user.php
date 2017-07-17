@@ -44,15 +44,76 @@ else{
             <button class="logoutBtn btn btn-md btn-danger">Logout</button>
         </div>
         <div class="col-md-6 col-sm-6 mainContent">
-            <form class="form-inline search-filfter"> <input type="text" class="form-control" placeholder="Search..."><span class="btn btn-default" type="submit"><span class="fa fa-search"></span></span></form>
+            <br style="clear:both;">
+            <form class="form-inline search-filfter"> <h3>Serial Publications</h3> <input type="text" class="form-control" placeholder="Search..."><span class="btn btn-default" type="submit"><span class="fa fa-search"></span></span></form>
             <br style="clear:both;">
             <div class="serialContent">
+                <div class="serial" data-id="">
+                    <button class="getDetailsBtn btn btn-md btn-default"><span class="fa fa-newspaper-o"></span></button>
+                    <div class="serial_image" data-image="">
+
+                    </div>
+                    <h5 class="serial_title">Serial for real for real</h5>
+                    <p class="serial_details">The details go on and on and on until they get over and over and over then so on</p>
+
+                </div>
+
                 <div class="serial" data-id="">
                     <div class="serial_image" data-image="">
 
                     </div>
-                    <h5 class="serial_title">Title</h5>
-                    <p class="serial_details">The detailss go on and on and on</p>
+                    <h5 class="serial_title">Serial for real for real</h5>
+                    <p class="serial_details">The details go on and on and on until they get over and over and over then so on</p>
+
+                </div>
+
+                <div class="serial" data-id="">
+                    <div class="serial_image" data-image="">
+
+                    </div>
+                    <h5 class="serial_title">Serial for real for real</h5>
+                    <p class="serial_details">The details go on and on and on until they get over and over and over then so on</p>
+
+                </div>
+
+                <div class="serial" data-id="">
+                    <div class="serial_image" data-image="">
+
+                    </div>
+                    <h5 class="serial_title">Serial for real for real</h5>
+                    <p class="serial_details">The details go on and on and on until they get over and over and over then so on</p>
+
+                </div>
+                <div class="serial" data-id="">
+                    <div class="serial_image" data-image="">
+
+                    </div>
+                    <h5 class="serial_title">Serial for real for real</h5>
+                    <p class="serial_details">The details go on and on and on until they get over and over and over then so on</p>
+
+                </div>
+                <div class="serial" data-id="">
+                    <div class="serial_image" data-image="">
+
+                    </div>
+                    <h5 class="serial_title">Serial for real for real</h5>
+                    <p class="serial_details">The details go on and on and on until they get over and over and over then so on</p>
+
+                </div>
+                <div class="serial" data-id="">
+                    <div class="serial_image" data-image="">
+
+                    </div>
+                    <h5 class="serial_title">Serial for real for real</h5>
+                    <p class="serial_details">The details go on and on and on until they get over and over and over then so on</p>
+
+                </div>
+                <div class="serial" data-id="">
+                    <div class="serial_image" data-image="">
+
+                    </div>
+                    <h5 class="serial_title">Serial for real for real</h5>
+                    <p class="serial_details">The details go on and on and on until they get over and over and over then so on</p>
 
                 </div>
             </div>
