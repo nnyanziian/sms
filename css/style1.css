@@ -256,7 +256,9 @@
         background-color: #3f51b5;
         background-position: center;
         background-size: cover;
+        position: relative;
     }
+    
     .serial .serial_title{
         color:#3f51b5;
         font-weight: bold;
@@ -265,4 +267,25 @@
     .serial .serial_details{
       margin:10px 5px;
       color:#787878;  
+    }
+    .contentDetails{
+        background-color: #f7f7f7;
+        height:100vh;
+    }
+    .serial_view_image{
+        background-color: #3f51b5;
+        height:30%;
+        width: 100%;
+        position: relative;
+    }
+    .editSerialBtn{
+        position: absolute;
+        top:15px;
+        right:15px;
+    }
+    .readViewBtn{
+        width:50%;
+        position:absolute;
+        bottom:20px;
+        left:20%;
     }

@@ -8,6 +8,7 @@ RewriteBase /sms
 RewriteRule ^register$ ./register.php [L]
 RewriteRule ^welcome$ ./index.php [L]
 RewriteRule ^admin-login$ ./adminLogin.php [L]
+RewriteRule ^admin$ ./admin.php [L]
 RewriteRule ^user$ ./user.php [L]
 
 

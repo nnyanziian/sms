@@ -121,7 +121,7 @@ else{
         <div class="col-md-3 col-sm-3 contentDetails" data-id="">
             
             <div class="serial_view_image" data-image="">
-            
+                <button class="btn btn-sm btn-default editSerialBtn" data-link="">Edit</button>
             </div>
             <h3 class="page-header">Serial Title is here</h3>
             <p>Serial details are here and there</p>
