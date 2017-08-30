@@ -1,28 +1,16 @@
 <?php
-/*
 session_start();
-
-	if( isset($_SESSION['elms-user_id']) && isset($_SESSION['elms-username']) && isset($_SESSION['elms-type']) && $_SESSION['elms-type']==1){
-	//student
-	header('Location:student.php');
-	}
-	else if(isset($_SESSION['elms-user_id']) && isset($_SESSION['elms-username']) && isset($_SESSION['elms-type']) && $_SESSION['elms-type']==2){
-	//supervisor
-	header('Location:supervisor.php');
-	}
-	else if(isset($_SESSION['elms-user_id']) && isset($_SESSION['elms-username']) && isset($_SESSION['elms-type']) && $_SESSION['elms-type']==3){
-	//condinaot
-	header('Location:codinator.php');
-	}
-else{
-//clear the session and logout
-  $_SESSION=array();
-  session_destroy();
-
- //header('Location:index.php');
-  
+if (isset($_SESSION['sms-user_id']) && !empty($_SESSION['sms-user_id']) &&
+    isset($_SESSION['sms-user_name']) && !empty($_SESSION['sms-user_name']) &&
+    isset($_SESSION['sms-user_account']) && $_SESSION['sms-user_account'] == 'user')
+    {
+		header("location:./user");
 }
-*/
+else {
+    $_SESSION = array();
+    session_destroy();
+
+}
 ?>
 <?php
 	include("inc/header.php");
@@ -35,8 +23,8 @@ else{
 		<div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3 loginView">
 			<a href="./welcome"><img src="img/logo.png" class="sms-logo img-responsive"></a>
 			
-			<form class="mainLogin">
-				<h3 class="text-center">User Login</h3>
+			<form class="mainLogin" id="userLogin">
+				<h3 class="text-center">User Sign in</h3>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user"></i></span>
 					<input name="username" type="text" class="username form-control" placeholder="Username" required>
@@ -55,8 +43,8 @@ else{
 
 
 
-			<form class="mainRegister hiddenElement">
-				<h3 class="text-center">Register</h3>
+			<form id="userRegister" class="mainRegister hiddenElement">
+				<h3 class="text-center">User Sign up</h3>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user"></i></span>
 					<input name="username" type="text" class="username form-control" placeholder="Username" required>

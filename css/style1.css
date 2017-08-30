@@ -166,11 +166,14 @@
     .profileBar .topProfile .profile_image{
         height:150px;
         width:150px;
-        background-color: #fff;
+       background-size:100%;
+       background-position: center;
         border-radius: 50%;
         margin: 15px auto;
         position: relative;
         overflow: hidden;
+        background-repeat: no-repeat;
+        background-color: #fff;
     }
     .customContainer{
         width:100%;
@@ -240,6 +243,9 @@
         margin-top:10px;
         margin-bottom: 10px;
         position: relative;
+        -webkit-transition: box-shadow 1s; /* For Safari 3.1 to 6.0 */
+        transition: box-shadow 1s;
+
 }
     .serial .getDetailsBtn{
         position: absolute;
@@ -254,12 +260,19 @@
 .serial:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
+
+.serial:hover .serial_image{
+    background-size: 100%;
+  }
     .serial .serial_image{
         height:60%;
-        background-color: #3f51b5;
+        background-color: #fff;
         background-position: center;
-        background-size: cover;
+        background-size: 50%;
         position: relative;
+        background-repeat: no-repeat;
+        -webkit-transition: background-size 1s; /* For Safari 3.1 to 6.0 */
+        transition: background-size 1s;
     }
     
     .serial .serial_title{
@@ -276,15 +289,20 @@
         height:100vh;
     }
     .serial_view_image{
-        background-color: #3f51b5;
+        background-color: #fff;
         height:30%;
         width: 100%;
         position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
     }
     .editSerialBtn{
         position: absolute;
         top:15px;
         right:15px;
+        background-color: #3f51b5;
+        color: #fff;
     }
     .readViewBtn{
         width:50%;
@@ -304,4 +322,11 @@
         font-size:18px;
         text-align: center;
         text-decoration: none;
+    }
+    .notification{
+        width:50%;
+    }
+
+    .opace{
+        opacity:0.01;
     }

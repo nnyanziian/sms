@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,4 +23,12 @@
 	
 	</head>
 <body>
+<div id="successNot" class="notification alert alert-success">
+<i class="fa fa-close pull-right"></i>
+ <p class="text-success text-center"></p>	
+ </div>
+<div id="warnNot" class="notification alert alert-warning">
+<i class="fa fa-close pull-right"></i>
+ <p class="text-warning text-center"></p>	
+</div>
 

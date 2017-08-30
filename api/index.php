@@ -53,7 +53,7 @@
 	//add Serial *
 	$app->post('/serial/add', 'addSerial');	
 	
-	//add Admin *
+	//add User *
 	$app->post('/user/register', 'registerUser');
 	
 
