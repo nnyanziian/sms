@@ -1,28 +1,15 @@
 <?php
-/*
 session_start();
-
-	if( isset($_SESSION['elms-user_id']) && isset($_SESSION['elms-username']) && isset($_SESSION['elms-type']) && $_SESSION['elms-type']==1){
-	//student
-	header('Location:student.php');
-	}
-	else if(isset($_SESSION['elms-user_id']) && isset($_SESSION['elms-username']) && isset($_SESSION['elms-type']) && $_SESSION['elms-type']==2){
-	//supervisor
-	header('Location:supervisor.php');
-	}
-	else if(isset($_SESSION['elms-user_id']) && isset($_SESSION['elms-username']) && isset($_SESSION['elms-type']) && $_SESSION['elms-type']==3){
-	//condinaot
-	header('Location:codinator.php');
-	}
-else{
-//clear the session and logout
-  $_SESSION=array();
-  session_destroy();
-
- //header('Location:index.php');
-  
+if (isset($_SESSION['sms-admin_id']) && !empty($_SESSION['sms-admin_id']) &&
+    isset($_SESSION['sms-admin_username']) && !empty($_SESSION['sms-admin_username']) &&
+    isset($_SESSION['sms-admin_account']) && $_SESSION['sms-admin_account'] == 'admin')
+    {
+		header("location:./admin");
 }
-*/
+else {
+    $_SESSION = array();
+    session_destroy();
+}
 ?>
 <?php
 	include("inc/header.php");
@@ -35,7 +22,7 @@ else{
 		<div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3 loginView">
 			<a href="./welcome"><img src="img/logo.png" class="sms-logo img-responsive"></a>
 			<h3 class="text-center">Admin Login</h3>
-			<form class="mainLogin">
+			<form class="mainLogin" id="adminLogin">
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user"></i></span>
 					<input name="username" type="text" class="username form-control" placeholder="Username" required>

@@ -48,6 +48,12 @@ $(function () {
         userLogin();
 
     });
+    $('#adminLogin').submit(function (event) {
+        event.preventDefault();
+        console.log("User is loging in");
+        adminLogin();
+
+    });
 
     $('.registerMain').click(function (e) {
         e.preventDefault();
@@ -195,49 +201,42 @@ function userLogin() {
     });
 
 }
-
-function suLogin() {
-    var username = $('.username').val();
-    var password = $('.password').val();
+function adminLogin() {
+    var username = $('#adminLogin .username').val();
+    var password = $('#adminLogin .password').val();
 
     var formdata = {
-        "username": username,
-        "password": password,
+        "admin_username": username,
+        "admin_password": password,
     };
+    //alert(JSON.stringify(formdata));
     var LoginSettings = {
         "type": "POST",
         //"dataType": "json",
         "data": formdata,
-        "url": "api/supervisor/login"
+        "url": "api/admin/login"
     };
 
     $.ajax(LoginSettings).success(function (response) {
+        console.log("Hello");
         if (response.status == 'failed' || response.status == 'error') {
             console.log(JSON.stringify(response));
             notify(response.message, "warning");
         } else if (response.status == 'success') {
-            $('.mainLogin')[0].reset();
+            $('#adminLogin')[0].reset();
             console.log(JSON.stringify(response));
-            notify("Logging in as Supervisor: " + response.username, "success");
-            location.reload();
+            notify("Signing in", "success");
+            console.log(JSON.stringify(response));
+          setTimeout(function () {
+               window.location.reload();
+            }, 5000);
             //window.location.href = "codinator.php";
         } else {
-
+            console.log("Else "+JSON.stringify(response));
         }
 
-    });
-
-}
-
-function logout() {
-    var getSettings = {
-        "type": "GET",
-        "url": "api/user/logout",
-    };
-    $.ajax(getSettings).success(function (response) {
+    }).error(function(response){
         console.log(JSON.stringify(response));
-        notify("Logging out", "success");
-        location.reload();
     });
 
 }

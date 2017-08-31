@@ -113,15 +113,11 @@ header('Content-type:application/json');
 			$admin_username=isescape('admin_username');
 
     
-            $sql=$conn->prepare("UPDATE library_admin SET admin_fullname=?, admin_username=? WHERE id=? ");
+            $sql=$conn->prepare("UPDATE library_admin SET admin_fullname=?, admin_username=? WHERE admin_id=?");
             $sql->bind_param("ssi", $aa, $bb, $cc);
             $aa=$admin_fullname;
             $bb=$admin_username;
             $cc=$id;
-
-
-		
-
 
 			if (!$sql->execute()) {
 				echo json_encode(array(
@@ -197,12 +193,11 @@ header('Content-type:application/json');
 					
 					$_SESSION['sms-admin_id']  = $user['admin_id'];
 					$_SESSION['sms-admin_username'] = $user['admin_username'];
+					$_SESSION['sms-admin_account'] ='admin';
 					
 					
 					echo json_encode(array(
-						'status' => 'success',
-						'user_id' => $_SESSION['sms-admin_id'],
-						'user_name' => $_SESSION['sms-admin_username']
+						'status' => 'success'
 					));
 					exit();
 					
