@@ -60,12 +60,14 @@ else {
         <div class="col-md-3 col-sm-3 contentDetails opace" data-id="">
             
             <div class="serial_view_image" data-image="">
-                <button class="btn btn-sm btn-default editSerialBtn" data-link="">Edit</button>
+                <button class="btn btn-sm btn-default editSerialBtn" data-toggle="modal" data-target="#editSerialCover" data-id="" data-link="">Edit Cover</button>
             </div>
             <h3 class="page-header sTitle">Serial Title is here</h3>
             <p class="sDetails">Serial details are here and there</p>
-
-            <button data-target="#readSerial" data-toggle="modal" class="btn btn-lg btn-default readViewBtn" data-link="">Read</button>
+            <button data-toggle="modal" data-target="#editSerial" data-id=""  class="editSerialContentBtn btn btn-sm btn-default"><span class="fa fa-pencil"> </span> Update Serial</button>
+            <button data-toggle="modal" data-target="#editSerialFile" data-id=""  class="editFileBtn btn btn-sm btn-default"><span class="fa fa-pencil"> </span> Update File</button>
+            <button data-id=""  class="deleteSerialBtn btn btn-sm btn-danger"><span class="fa fa-close"> </span> Delete</button>
+            <button data-target="#readSerial" data-toggle="modal" data-id=""  class="btn btn-lg btn-default readViewBtn" data-link="">Read</button>
         </div>
             
         </div>
@@ -142,6 +144,95 @@ else {
 				<br>
 
 			<Button type="submit" class="continue btn btn-primary">Add <span class="fa fa-plus"> </span></Button>
+				</form>
+</div>
+</div>
+</div>
+    </div>
+
+
+    <div id="editSerial" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Edit Serial</h4>
+            </div>
+            <div class="modal-body">
+    <form id="editSerialForm" class="addSerialForm" data-id="">
+				<div class="input-group">
+                <span class="input-group-addon">Title</span>
+					<input name="serial_title" type="text" class="serial_title form-control" placeholder="Title" required>
+				</div>
+				<br>
+				<div class="input-group">
+					<span class="input-group-addon">Issue</span>
+					<input name="serial_issue" type="text" class="serial_issue form-control" placeholder="Issue" required>
+				</div>
+				<br>
+                <div class="input-group">
+					<span class="input-group-addon">Publisher</span>
+					<input name="serial_publisher" type="text" class="serial_publisher form-control" placeholder="Publisher" required>
+				</div>
+				<br>
+                <div class="input-group">
+					<span class="input-group-addon">Description</span>
+					<textarea name="serial_details" class="serial_details form-control" placeholder="Description" required></textarea>
+				</div>
+				<br>
+
+			<Button type="submit" class="continue btn btn-primary">Save changes and Exit <span class="fa fa-save"> </span></Button>
+				</form>
+</div>
+</div>
+</div>
+    </div>
+
+
+
+
+    
+    <div id="editSerialCover" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Set Serial Cover </h4>
+            </div>
+            <div class="modal-body">
+    <form id="editSerialCoverForm" class="editSerialCoverForm" data-id=""  method="post" enctype="multipart/form-data">
+				<div class="input-group">
+                <span class="input-group-addon">Cover File</span>
+					<input name="serial_cover" id="serial_cover" type="file" class="imageUpload serial_cover form-control" placeholder="Cover" required>
+				</div>
+				<br>
+
+
+			<Button type="submit" class="continue btn btn-primary">Save changes and Exit <span class="fa fa-save"> </span></Button>
+				</form>
+</div>
+</div>
+</div>
+    </div>
+
+
+    <div id="editSerialFile" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Set Serial File </h4>
+            </div>
+            <div class="modal-body">
+    <form id="editSerialFileForm" class="editSerialCoverForm" data-id=""  method="post" enctype="multipart/form-data">
+				<div class="input-group">
+                <span class="input-group-addon">Serial File</span>
+					<input name="serial_file" id="serial_file" type="file" class="pdfUpload serial_file form-control" placeholder="File" required>
+				</div>
+				<br>
+
+
+			<Button type="submit" class="continue btn btn-primary">Save changes and Exit <span class="fa fa-save"> </span></Button>
 				</form>
 </div>
 </div>

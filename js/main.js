@@ -240,3 +240,47 @@ function adminLogin() {
     });
 
 }
+
+function imageVerify(imageField) {
+    var match = ['image/jpeg', 'image/png', 'image/jpg'];
+    $(imageField).change(function () {
+        var file = this.files[0];
+        var imagefile = file.type;
+        var imagefileSize = file.size;
+        var imageInKbs = Math.round(imagefileSize / 1024);
+        if (!((imagefile === match[0]) || (imagefile === match[1]) || (imagefile === match[2]))) {
+            notify('File uploaded is not a valid image Recommended (jpeg, jpg, png)', 'warning');
+            $(imageField).val('');
+            return !1
+        } else if (imageInKbs > 1000) {
+            $(imageField).val('');
+            notify('Image is large, (it should be less than 1 mb)', 'warning');
+            return !1
+        } else {
+            $('.notification').hide();
+            return !0
+        }
+    });
+}
+
+function pdfVerify(imageField) {
+    var match = ['application/pdf'];
+    $(imageField).change(function () {
+        var file = this.files[0];
+        var imagefile = file.type;
+        var imagefileSize = file.size;
+        var imageInKbs = Math.round(imagefileSize / 100024);
+        if (!((imagefile === match[0]))) {
+            notify('File uploaded is not a valid PDF Recommended (pdf)', 'warning');
+            $(imageField).val('');
+            return !1
+        } else if (imageInKbs > 1000) {
+            $(imageField).val('');
+            notify('PDF is large, (it should be less than 100 mb)', 'warning');
+            return !1
+        } else {
+            $('.notification').hide();
+            return !0
+        }
+    });
+}

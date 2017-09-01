@@ -244,7 +244,7 @@
         margin-bottom: 10px;
         position: relative;
         -webkit-transition: box-shadow 1s; /* For Safari 3.1 to 6.0 */
-        transition: box-shadow 1s;
+        transition: box-shadow 500ms;
         margin-left:20px;
         margin-right:20px;
         
@@ -263,14 +263,11 @@
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.serial:hover .serial_image{
-    background-size: 100%;
-  }
     .serial .serial_image{
         height:60%;
         background-color: #fff;
         background-position: center;
-        background-size: 50%;
+        background-size: 100%;
         position: relative;
         background-repeat: no-repeat;
         -webkit-transition: background-size 1s; /* For Safari 3.1 to 6.0 */
@@ -331,4 +328,7 @@
 
     .opace{
         opacity:0.01;
+    }
+    .serial_cover::before{
+        background-color:#9EABF1
     }
