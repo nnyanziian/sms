@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README #
 
 This README will guide you in the steps are necessary to get Sms application up and running.
@@ -26,3 +27,7 @@ This README will guide you in the steps are necessary to get Sms application up 
 
 * Repo owner or admin
 * Other community or team contact
+=======
+# sms
+Serial Management System
+>>>>>>> 1faca45669b53ba2db29a7c794abbfdbca4d834e
